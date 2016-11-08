@@ -1,1 +1,9 @@
 <h2>Home</h2>
+
+<form ng-submit="addUser()" novalidate>
+    <div>
+        <h3>Name</h3>
+        <input class="form-control" type="text" name="user" ng-model="user">
+    </div>
+    <button type="submit" class="btn"> Add Name </button>
+</form>

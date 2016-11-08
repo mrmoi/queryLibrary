@@ -13,7 +13,7 @@
     <script src="public/js/lib/angular/angular-animate.min.js"></script>
 
 
-    <title>SQL Queries Library</title>
+    <title>Queries App</title>
 </head>
 <body>
 
@@ -64,6 +64,9 @@
         messagingSenderId: "326269101569"
     };
     firebase.initializeApp(config);
+
+    var FbApp = firebase.initializeApp(firebaseConfig);
+    module.exports.FBApp = FbApp.database();
 </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
