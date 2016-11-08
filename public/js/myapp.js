@@ -7,15 +7,15 @@ var myApp = angular.module('myApp', ['ngRoute', 'firebase'])
 myApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
     when('/home', {
-        templateUrl: 'partials/home.html',
+        templateUrl: 'public/partials/home.html',
         controller: 'dbController'
     }).
     when('/upload', {
-        templateUrl: 'partials/upload.html',
+        templateUrl: 'public/partials/upload.html',
         controller: 'dbController'
     }).
     when('/other', {
-        templateUrl: 'partials/other.html',
+        templateUrl: 'public/partials/other.html',
         controller: 'dbController'
     }).
     otherwise ({
