@@ -2,21 +2,21 @@
  * Created by moimartz on 11/8/16.
  */
 
-myApp.controller('dbController',['$scope','$rootScope',
-    function($scope, $rootScope) {
+myApp.controller('dbController',['$scope','$rootScope','$firebaseArray','FIREBASE_URL',
+    function($scope, $rootScope, $firebaseArray, FIREBASE_URL) {
 
 // Get a reference to the database service
-var database = firebase.database();
+var nameRef = new Firebase(FIREBASE_URL + '/name');
+var nameInfo = $firebaseArray(nameRef);
+$scope.names = nameInfo;
 
-        $scope.user = firebase;
-
-        $scope.addUser = function writeUserData(userId, name) {
-            firebase.database().ref('users/' + userId).set({
-                username: name
-                //email: email,
-                //profile_picture : imageUrl
-            });
-        }
-
+$scope.addName = function() {
+   nameInfo.$add({
+      name: $scope.nameField,
+      date: Firebase.ServerValue.TIMESTAMP
+   }).then(function () {
+      $scope.nameField = '';
+   });
+};
 
 }]);
