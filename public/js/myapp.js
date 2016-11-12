@@ -13,6 +13,7 @@ myApp.config(function ($stateProvider) {
             //templateUrl: 'public/partials/home.html'
             component: 'namesComponent',
             templateUrl: 'public/partials/home.html'
+            //views: 'results'
         },
 
         {
@@ -32,7 +33,7 @@ myApp.config(function ($stateProvider) {
         {
             name: 'history',
             url:  '/history',
-            //controller: 'dbController',
+            controller: 'dbController',
             //templateUrl: 'public/partials/home.html'
             component: 'historyComponent',
             templateUrl: 'public/partials/history.html'
