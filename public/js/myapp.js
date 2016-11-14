@@ -9,7 +9,7 @@ myApp.config(function ($stateProvider) {
         {
             name: 'home',
             url:  '/home',
-            //controller: 'dbController',
+            controller: 'dbController',
             //templateUrl: 'public/partials/home.html'
             component: 'namesComponent',
             templateUrl: 'public/partials/home.html'

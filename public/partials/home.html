@@ -1,3 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-6 col-md-offset-3">
+            <h4>Upload Queries</h4>
+            <p>Store the queries by category</p>
+            <form ng-submit="addName()" novalidate>
+                <div>
+                    <h5>Query Name</h5>
+                    <input class="form-control" type="text" name="nameField" ng-model="nameField">
+                </div>
+                <button type="submit" class="btn"> Add Name </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h3> Names Stored </h3>
+            <div ng-repeat="(key, n) in names"> {{ n.name }}</div>
+        </div>
+    </div>
+</div>
+
+
 <!--<nav class="navbar navbar-default innerNav">
     <div class="container-fluid">
         &lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;
@@ -17,12 +42,7 @@
         </div>&lt;!&ndash; /.navbar-collapse &ndash;&gt;
     </div>&lt;!&ndash; /.container-fluid &ndash;&gt;
 </nav>-->
-
-
-
-<names-component></names-component>
-
-
+<!--<names-component></names-component>-->
 <!--<div ng-repeat="(key, n) in names">
     <p>{{ n.name }}</p>
 </div>-->
