@@ -7,21 +7,44 @@ myApp.config(function ($stateProvider) {
     var states = [
 
         {
-            name: 'home',
-            url:  '/home',
-            controller: 'dbController',
+            name: 'view',
+            url:  '/view',
+            //controller: 'dbController',
             //templateUrl: 'public/partials/home.html'
-            component: 'namesComponent',
-            templateUrl: 'public/partials/home.html'
+            //component: 'namesComponent',
+            templateUrl: 'public/partials/view.html'
             //views: 'results'
         },
 
         {
-            name: 'home.one',
-            url: 'home.one',
-            templateUrl: 'home.one.html'
+            name: 'upload',
+            url: '/upload',
+            templateUrl: 'public/partials/upload.html',
+            component: 'historyComponent'
 
         },
+
+        {
+            name: 'view.cat1',
+            url: '/view.cat1',
+            templateUrl: 'public/partials/view.cat1.html'
+        },
+
+        {
+            name: 'view.cat2',
+            url: '/view.cat2',
+            templateUrl: 'public/partials/view.cat2.html'
+        },
+
+        {
+            name: 'view.cat3',
+            url: '/view.cat3',
+            templateUrl: 'public/partials/view.cat3.html'
+        }
+
+
+
+        /*,
 
         {
             name: 'home.two',
@@ -51,7 +74,7 @@ myApp.config(function ($stateProvider) {
             //templateUrl: 'public/partials/home.html'
             component: 'historyComponent',
             templateUrl: 'public/partials/history.html'
-        }
+        }*/
 
 
     ]

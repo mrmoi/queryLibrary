@@ -28,5 +28,5 @@
         }
     }*!/
 
-    templateUrl: 'public/partials/cat1.html'*/
+    templateUrl: 'public/partials/view.cat1.html'*/
 
