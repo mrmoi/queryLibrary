@@ -17,6 +17,20 @@ myApp.config(function ($stateProvider) {
         },
 
         {
+            name: 'home.one',
+            url: 'home.one',
+            templateUrl: 'home.one.html'
+
+        },
+
+        {
+            name: 'home.two',
+            url: 'home.two',
+            templateUrl: 'home.two.html'
+
+        },
+
+        {
             name: 'upload',
             url:  '/upload',
             controller: 'dbController',
