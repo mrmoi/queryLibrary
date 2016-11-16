@@ -1,21 +1,31 @@
-<h5>Upload Queries</h5>
+<h4>Register Query</h4>
 <!-- QUERY NAME -->
-<form name="myform" ng-submit="addName()" novalidate>
-    <div class="inputwrapper">
-        <h5>Query Name</h5>
-        <input class="form-control" type="text" name="nameField" ng-model="nameField">
+<p>To register your query enter the following information:</p>
 
-        <h5>Query Category</h5>
-        <select class="form-control">
-            <option ng-repeat="(key, n) in names">{{ n.name }}</option>
+<form name="myform" ng-submit="addQuery()">
+<div>
+   <h5>Name</h5>
+       <input type="text" name="nameField" ng-model="nameField">
+
+   <!--<input type="text" name="categoryField" ng-model="categoryField">-->
+
+   <h5>Category</h5>
+        <select>
+            <div ng-model="categoryField">
+                <option ng-repeat="(key, c) in categories">{{ c.category }}</option>
+            </div>
         </select>
 
-        <h5>Query</h5>
-        <textarea class="form-control" type="text" rows="3" name="nameField" ng-model="nameField"></textarea>
 
-    <hr>
-    </div>
-    <button type="submit" class="btn" ng-disabled="myform.$invalid"> Add Name </button>
+   <h5>Description</h5>
+    <input type="text" name="descriptionField" ng-model="descriptionField">
+
+    <h5>Query</h5>
+        <textarea type="text" rows="3" name="queryField" ng-model="queryField"></textarea>
+
+<hr>
+</div>
+    <button type="submit" class="btn">Add Query</button>
 </form>
 
 

@@ -5,18 +5,27 @@
 myApp.controller('dbController',['$scope','$rootScope','$firebaseArray','FIREBASE_URL',
     function($scope, $rootScope, $firebaseArray, FIREBASE_URL) {
 
+/* Data to store: QueryName, QueryCategory, Query description, Query, Date/Time uploaded */
+
 // Get a reference to the database service
-var nameRef = new Firebase(FIREBASE_URL + '/name');
-var nameInfo = $firebaseArray(nameRef);
-$scope.names = nameInfo;
+var queriesRef = new Firebase(FIREBASE_URL + '/queries');
+var queriesInfo = $firebaseArray(queriesRef);
+$scope.queries = queriesInfo;
 
 
-$scope.addName = function() {
-   nameInfo.$add({
-      name: $scope.nameField,
+$scope.addQuery = function() {
+   queriesInfo.$add({
+      name:          $scope.nameField,
+      category:      $scope.categoryField,
+      description:   $scope.descriptionField,
+      query:         $scope.queryField,
       date: Firebase.ServerValue.TIMESTAMP
    }).then(function () {
       $scope.nameField = '';
+      $scope.categoryField = '';
+      $scope.descriptionField = '';
+      $scope.queryField = '';
+
    });
 };
 
@@ -26,25 +35,4 @@ $scope.addName = function() {
 
 
 
-/*
-myApp.filter('searchFor', function () {
 
-   return function (arr, searchString) {
-      if(!searchString){
-         return arr;
-      }
-
-      var result = [];
-
-      searchString = searchString.toLowerCase();
-
-      angular.forEach(arr, function (item) {
-         if(item.names.toLowerCase().indexOf(searchString) !== -1){
-            result.push(item);
-         }
-
-      });
-
-      return result;
-   };
-});*/
