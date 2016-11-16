@@ -2,7 +2,9 @@ var myApp = angular.module('myApp', ['ui.router','firebase'])
     .constant('FIREBASE_URL', 'https://myqueries-3aa66.firebaseio.com/');
 
 
-myApp.config(function ($stateProvider) {
+myApp.config(function ($stateProvider, $urlRouterProvider) {
+
+    $urlRouterProvider.otherwise('view');
 
     var states = [
 
