@@ -11,7 +11,8 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
         {
             name: 'view',
             url:  '/view',
-            templateUrl: 'public/partials/view.html'
+            templateUrl: 'public/partials/view.html',
+            controller: 'dbController'
         },
 
         {

@@ -11,9 +11,7 @@
 
    <h5>Category</h5>
         <select>
-            <div ng-model="categoryField">
-                <option ng-repeat="(key, c) in categories">{{ c.category }}</option>
-            </div>
+                <option name="categoryField" ng-model="categoryField" ng-repeat="(key, c) in categories">{{ c.category }}</option>
         </select>
 
 
