@@ -15,7 +15,8 @@ myApp.config(function ($stateProvider) {
         {
             name: 'upload',
             url: '/upload',
-            templateUrl: 'public/partials/upload.html'
+            templateUrl: 'public/partials/upload.html',
+            controller: 'dbController'
         },
 
         {
