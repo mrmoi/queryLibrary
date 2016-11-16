@@ -15,7 +15,6 @@ myApp.config(function ($stateProvider) {
         {
             name: 'upload',
             url: '/upload',
-            component: 'historyComponent',
             templateUrl: 'public/partials/upload.html'
         },
 

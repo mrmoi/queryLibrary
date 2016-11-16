@@ -10,6 +10,7 @@ var nameRef = new Firebase(FIREBASE_URL + '/name');
 var nameInfo = $firebaseArray(nameRef);
 $scope.names = nameInfo;
 
+
 $scope.addName = function() {
    nameInfo.$add({
       name: $scope.nameField,

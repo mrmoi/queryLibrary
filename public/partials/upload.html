@@ -1,5 +1,14 @@
-<history-component></history-component>
+<h5>Upload Queries</h5>
+
+<form name="myform" ng-submit="addName()" novalidate>
+    <div class="inputwrapper">
+        <h3 class="controlHeading">Name</h3>
+        <input class="form-control" type="text" name="nameField" ng-model="nameField">
+    </div>
+    <button type="submit" class="btn" ng-disabled="myform.$invalid"> Add Name </button>
+</form>
 
 
-
-
+<div ng-repeat="(key, n) in names">
+    <p>{{ n.name }}</p>
+</div>
