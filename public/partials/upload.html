@@ -5,21 +5,23 @@
 <form name="myform" ng-submit="addQuery()">
 <div>
    <h5>Name</h5>
-       <input type="text" name="nameField" ng-model="nameField">
+   <input type="text" name="nameField" ng-model="nameField">
 
-   <!--<input type="text" name="categoryField" ng-model="categoryField">-->
+<!--<h5>Category</h5>
+   <select>
+   <option name="categoryField" ng-repeat="(key, a) in queries" ng-model="categoryField" value="{{ a.category }}">{{ a.category }}</option>
+   </select>-->
 
-   <h5>Category</h5>
-        <select>
-                <option name="categoryField" ng-model="categoryField" ng-repeat="(key, c) in categories">{{ c.category }}</option>
-        </select>
-
+    <h5>Category</h5>
+    <select ng-model="queries.categoryField" ng-options="categoryField.category for (id, categoryField) in categoryFieldList">
+        <option>{{ categoryField.category }}</option>
+    </select>
 
    <h5>Description</h5>
-    <input type="text" name="descriptionField" ng-model="descriptionField">
+   <input type="text" name="descriptionField" ng-model="descriptionField">
 
-    <h5>Query</h5>
-        <textarea type="text" rows="3" name="queryField" ng-model="queryField"></textarea>
+   <h5>Query</h5>
+   <textarea type="text" rows="3" name="queryField" ng-model="queryField"></textarea>
 
 <hr>
 </div>
