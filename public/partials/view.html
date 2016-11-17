@@ -1,8 +1,8 @@
 <div class="navbar navbar-default">
         <ul class="nav">
-            <li><a ui-sref="view.cat1" ng-controller="dbController"><h5>{{ queries.category }}</h5></a></li>
-            <li><a ui-sref="view.cat2">Category 2</a></li>
-            <li><a ui-sref="view.cat3">Category 3</a></li>
+            <li><a ui-sref="view.cat1" ng-repeat="(key, n) in queries" ng-show="$index==0">{{ n.category }}</a></li>
+            <li><a ui-sref="view.cat2" ng-repeat="(key, n) in queries" ng-show="$index==1">{{ n.category }}</a></li>
+            <li><a ui-sref="view.cat3" ng-repeat="(key, n) in queries" ng-show="$index==2">{{ n.category }}</a></li>
         </ul>
 </div>
 
@@ -10,4 +10,10 @@
     <i>Some content will load here!</i>
 </ui-view>
 
+<!--
+<div ng-repeat="(key, n) in queries">
+    <p>{{ n.category }}</p>
+</div>
 
+ng-repeat="(key, n) in queries"
+-->
