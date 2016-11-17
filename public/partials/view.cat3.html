@@ -1,1 +1,6 @@
-<h5>Cat 3</h5>
+<div ng-repeat="(key, n) in queries" ng-show="$index==2">
+    <p>{{ n.name }}</p>
+    <p>{{ n.category }}</p>
+    <p>{{ n.description }}</p>
+    <p>{{ n.query }}</p>
+</div>
