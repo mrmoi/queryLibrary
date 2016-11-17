@@ -25,19 +25,22 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
         {
             name: 'view.cat1',
             url: '/view.cat1',
-            templateUrl: 'public/partials/view.cat1.html'
+            templateUrl: 'public/partials/view.cat1.html',
+            controller: 'dbController'
         },
 
         {
             name: 'view.cat2',
             url: '/view.cat2',
-            templateUrl: 'public/partials/view.cat2.html'
+            templateUrl: 'public/partials/view.cat2.html',
+            controller: 'dbController'
         },
 
         {
             name: 'view.cat3',
             url: '/view.cat3',
-            templateUrl: 'public/partials/view.cat3.html'
+            templateUrl: 'public/partials/view.cat3.html',
+            controller: 'dbController'
         }
 
     ]

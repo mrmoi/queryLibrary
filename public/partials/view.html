@@ -1,6 +1,6 @@
 <div class="navbar navbar-default">
         <ul class="nav">
-            <li><a ui-sref="view.cat1" ng-model="nameField" ng-repeat="(key, n) in names">{{ n.name }}</a></li>
+            <li><a ui-sref="view.cat1" ng-controller="dbController"><h5>{{ queries.category }}</h5></a></li>
             <li><a ui-sref="view.cat2">Category 2</a></li>
             <li><a ui-sref="view.cat3">Category 3</a></li>
         </ul>
