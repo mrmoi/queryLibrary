@@ -1,4 +1,4 @@
-<div ng-repeat="(key, n) in queries" ng-show="$index==1">
+<div ng-repeat="(key, n) in queries | filter : 'Music' ">
     <p>{{ n.name }}</p>
     <p>{{ n.category }}</p>
     <p>{{ n.description }}</p>

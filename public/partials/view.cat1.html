@@ -1,6 +1,20 @@
+<!--
 <div ng-repeat="(key, n) in queries" ng-show="$index==0">
     <p>{{ n.name }}</p>
     <p>{{ n.category }}</p>
     <p>{{ n.description }}</p>
     <p>{{ n.query }}</p>
+</div>-->
+
+<!--<div ng-repeat="(key, n) in queries | filter : 'Soccer' ">
+    <p>{{ n.name }}</p>
+    <p>{{ n.category }}</p>
+    <p>{{ n.description }}</p>
+    <p>{{ n.query }}</p>
+</div>-->
+<div ng-repeat="(key, n) in queries | filter : 'Soccer' ">
+    <p>{{ n.category }}</p>
+    <p>{{ n.description }}</p>
+    <p>{{ n.name }}</p>
+    <p>{{ n.query | uppercase}}</p>
 </div>

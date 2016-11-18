@@ -38,6 +38,9 @@
 
 <hr>
 
-<div ng-repeat="(key, n) in queries">
+<div ng-repeat="(key, n) in queries | filter : 'Soccer' ">
     <p>{{ n.category }}</p>
+    <p>{{ n.description }}</p>
+    <p>{{ n.name }}</p>
+    <p>{{ n.query | uppercase}}</p>
 </div>
