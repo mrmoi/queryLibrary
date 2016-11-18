@@ -19,7 +19,7 @@
     <br>
 
     <select name="repeatSelect" ng-model="categoryField">
-        <option ng-repeat="a in queries" value="{{a.category}}">{{a.category}}</option>
+        <option ng-repeat="a in queries" ng-if="$index < 3" value="{{a.category}}">{{ a.category }}</option>
     </select>
 
 <!--<select ng-model="categoryField" ng-options="c.category for (id, c) in queries"><option value="">Select A Category</option></select>-->
