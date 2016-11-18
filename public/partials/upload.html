@@ -12,10 +12,17 @@
    <option name="categoryField" ng-repeat="(key, a) in queries" ng-model="categoryField" value="{{ a.category }}">{{ a.category }}</option>
    </select>-->
 
-    <h5>Category</h5>
-    <select ng-model="queries.categoryField" ng-options="categoryField.category for (id, categoryField) in categoryFieldList">
-        <option>{{ categoryField.category }}</option>
+    <!--<h5>Category</h5>
+    <select ng-options="c as c.category for c in queries track by c.key" ng-model="categoryField">
+    </select>-->
+<br>
+    <br>
+
+    <select name="repeatSelect" ng-model="categoryField">
+        <option ng-repeat="a in queries" value="{{a.category}}">{{a.category}}</option>
     </select>
+
+<!--<select ng-model="categoryField" ng-options="c.category for (id, c) in queries"><option value="">Select A Category</option></select>-->
 
    <h5>Description</h5>
    <input type="text" name="descriptionField" ng-model="descriptionField">
@@ -28,10 +35,9 @@
     <button type="submit" class="btn">Add Query</button>
 </form>
 
-<!--
+
 <hr>
 
 <div ng-repeat="(key, n) in queries">
     <p>{{ n.category }}</p>
 </div>
--->
