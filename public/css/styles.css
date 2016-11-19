@@ -3,4 +3,23 @@
     color: blue;
 }
 
+.queryButton {
+    padding: 5px 5px 5px 5px;
+    margin: 6px 0px 6px 0px;
+    background-color: lightgray;
+    width: 100%;
+    font-weight: 900;
+    border: 1px solid darkorange;
+    border-radius: 25px;
+    box-shadow: 2px 2px;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
 
+
+
+/* MENU */
+.menuButton {
+    background-color: azure;
+    border: 1px solid darkred;
+}
