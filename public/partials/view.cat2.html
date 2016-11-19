@@ -1,5 +1,9 @@
+<input type="text" placeholder="Search" ng-model="searchFilter" />
+
+<hr>
+
 <!-- can be converted into a component -->
-<div ng-repeat="(key, n) in queries | filter : 'Music' ">
+<div ng-repeat="(key, n) in queries | filter : 'Music' | filter:searchFilter">
     <button ng-href="#" ng-click="viewQuery = !viewQuery">{{ n.name }}</button>
     <p ng-show="viewQuery">{{ n.description }}</p>
     <p ng-show="viewQuery">{{ n.category }}</p>
