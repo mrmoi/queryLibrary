@@ -16,10 +16,37 @@
     transition-duration: 0.5s;
 }
 
+.queryButton:hover {
+    background-color: lightblue;
+    transition: 0.5s;
+}
+
 
 
 /* MENU */
-.menuButton {
-    background-color: azure;
-    border: 1px solid darkred;
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+
+/* CONTAINER */
+.mainContainer {
+    background-color: gainsboro;
+    height: 100vh;
+}
+/*
+.mainRow {
+    border: 2px solid darkgoldenrod;
+}
+*/
+main {
+    background-color: lightblue;
+    height: 100vh;
+    padding: 5%;
 }
