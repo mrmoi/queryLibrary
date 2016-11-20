@@ -5,12 +5,12 @@
 }
 */
 .queryButton {
-    padding: 5px 5px 5px 5px;
+    padding: 2px 2px 2px 2px;
     margin: 6px 0px 6px 0px;
-    background-color: lightgray;
+    background-color: #b2bdff;
     width: 100%;
     font-weight: 900;
-    border: 1px solid darkorange;
+    border: 1px solid #5966b2;
     border-radius: 25px;
     box-shadow: 2px 2px;
     -webkit-transition-duration: 0.5s;
@@ -18,7 +18,7 @@
 }
 
 .queryButton:hover {
-    background-color: lightblue;
+    background-color: #fff3cb;
     transition: 0.5s;
 }
 
@@ -96,4 +96,12 @@ h1, h2, h3, h4, h5 {
 
 p {
     font-family: 'Trirong', serif;
+}
+
+.divider {
+    color: #5966b2;
+}
+
+.searchBar {
+    width: 75%;
 }

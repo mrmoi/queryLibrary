@@ -1,10 +1,14 @@
-<input type="text" placeholder="Search" ng-model="searchFilter" />
+<form class="form-horizontal">
+    <div class="form-group col-md-6 col-md-offset-3">
+        <input type="text" placeholder="Enter the query name..." class="form-control input-sm" ng-model="searchFilter" />
+    </div>
+</form>
 
 <hr>
 
 <!-- can be converted into a component -->
 <div ng-repeat="(key, n) in queries | filter : 'Movies' | filter:searchFilter">
-    <button ng-href="#" ng-click="viewQuery = !viewQuery">{{ n.name }}</button>
+    <button class="queryButton" ng-href="#" ng-click="viewQuery = !viewQuery">{{ n.name }}</button>
     <p ng-show="viewQuery">{{ n.description }}</p>
     <p ng-show="viewQuery">{{ n.category }}</p>
     <pre ng-show="viewQuery">{{ n.query | uppercase}}</pre>
