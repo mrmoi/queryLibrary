@@ -2,12 +2,16 @@
 <p> Use this application to store SQL queries needed for daily tasks. Store queries by category
     in the upload queries area.</p>
 
+<div class="container-fluid">
+    <div class="row">
 <div class="navbar navbar-default">
         <ul class="nav navbar-nav">
             <li><a ui-sref="view.cat1" ng-repeat="(key, n) in queries" ng-show="$index==0">{{ n.category }}</a></li>
             <li><a ui-sref="view.cat2" ng-repeat="(key, n) in queries" ng-show="$index==1">{{ n.category }}</a></li>
             <li><a ui-sref="view.cat3" ng-repeat="(key, n) in queries" ng-show="$index==2">{{ n.category }}</a></li>
         </ul>
+</div>
+    </div>
 </div>
 
 <ui-view>

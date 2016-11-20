@@ -7,18 +7,23 @@
 .queryButton {
     padding: 2px 2px 2px 2px;
     margin: 6px 0px 6px 0px;
-    background-color: #b2bdff;
+    background-color: aliceblue;
     width: 100%;
     font-weight: 900;
-    border: 1px solid #5966b2;
+    border: 1px solid darkslateblue;
     border-radius: 25px;
     box-shadow: 2px 2px;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
+    color: darkslateblue;
+    font-family: 'Trirong', serif;
+    font-size: 1.0em;
 }
 
 .queryButton:hover {
-    background-color: #fff3cb;
+    background-color: lightslategray;
+    border: 1px solid #5966b2;
+    color: aliceblue;
     transition: 0.5s;
 }
 
@@ -105,3 +110,6 @@ p {
 .searchBar {
     width: 75%;
 }
+
+
+
