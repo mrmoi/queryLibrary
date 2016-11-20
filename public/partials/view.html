@@ -1,3 +1,7 @@
+<h4>SQL Query Library</h4>
+<p> Use this application to store SQL queries needed for daily tasks. Store queries by category
+    in the upload queries area.</p>
+
 <div class="navbar navbar-default">
         <ul class="nav navbar-nav">
             <li><a ui-sref="view.cat1" ng-repeat="(key, n) in queries" ng-show="$index==0">{{ n.category }}</a></li>
@@ -7,6 +11,6 @@
 </div>
 
 <ui-view>
-    <i>Some content will load here!</i>
+    <p>Click on the categories to view your queries</p>
 </ui-view>
 

@@ -1,8 +1,9 @@
+/*
 .active {
     background-color: coral;
-    color: blue;
+    color: white;
 }
-
+*/
 .queryButton {
     padding: 5px 5px 5px 5px;
     margin: 6px 0px 6px 0px;
@@ -23,22 +24,53 @@
 
 /* COLORS TO BE USED
 #b2a16b light brown
-#fff3cb offwhite
+#fff3cb off white
 #ffedb2 beige
 #5966b2 blue
 #b2bdff light blue
-
 */
 
 
 /* MENU */
+
+/* MENU BAR */
+.navbar {
+    background-color: #5966b2;
+    border-radius: 5px;
+}
+
+/* MENU BUTTONS */
 .navbar .navbar-nav {
     display: inline-block;
     float: none;
     vertical-align: top;
-    /*border: 1px solid goldenrod;*/
+    background-color: #b2bdff;
+    border: 1px solid #5966b2;
 }
 
+/* MENU BUTTONS TEXT */
+.navbar .navbar-nav li a {
+    /*display: inline-block;
+    float: none;
+    vertical-align: top;*/
+    color: #fff3cb;
+    font-family: 'Slabo 27px', serif;
+    font-size: 1.3em;
+    font-weight: bolder;
+    text-shadow: 2px 1px #5966b2;
+
+}
+
+/* MENU BUTTONS HOVER TEXT */
+.navbar .navbar-nav li a:hover {
+    color: #5966b2;
+    font-family: 'Slabo 27px', serif;
+    font-size: 1.3em;
+    font-weight: bolder;
+    text-shadow: 2px 1px #fff3cb;
+}
+
+/* COLLAPSED MENU STATE */
 .navbar .navbar-collapse {
     text-align: center;
 }
@@ -56,4 +88,12 @@ main {
     border-right: 3px solid #b2a16b;
     height: 100vh;
     padding: 5%;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Slabo 27px', serif;
+}
+
+p {
+    font-family: 'Trirong', serif;
 }
