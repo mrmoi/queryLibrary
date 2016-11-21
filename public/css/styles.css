@@ -141,3 +141,12 @@ textarea {
     margin-top: 1%;
     margin-bottom: 1%;
 }
+
+/* FORM */
+.myform input.ng-invalid.ng-touched {
+    background-color: #FA787E;
+}
+
+.myform input.ng-valid.ng-touched {
+    background-color: #78FA89;
+}

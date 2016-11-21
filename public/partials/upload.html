@@ -2,23 +2,23 @@
 <!-- QUERY NAME -->
 <p>To register your query enter the following information:</p>
 
-<form name="myform" ng-submit="addQuery()">
+<form  class="myform" name="myform" ng-submit="addQuery()" novalidate>
 
 <div class="form-group col-md-8">
 
 <label>Name</label>
-<input type="text" class="form-control" placeholder="Name" name="nameField" ng-model="nameField">
+<input type="text" class="form-control" placeholder="Name" name="nameField" ng-model="nameField" required>
 
 <label>Category</label>
-<select name="repeatSelect" ng-model="categoryField" class="form-control">
+<select name="repeatSelect" ng-model="categoryField" class="form-control" required>
 <option ng-repeat="a in queries" ng-if="$index < 3" value="{{a.category}}">{{ a.category }}</option>
 </select>
 
 <label>Description</label>
-<input type="text" name="descriptionField" placeholder="Description" class="form-control" ng-model="descriptionField">
+<input type="text" name="descriptionField" placeholder="Description" class="form-control" ng-model="descriptionField" required>
 
 <label>Query</label>
-<textarea type="text" rows="3" name="queryField" placeholder="Query" class="form-control" ng-model="queryField"></textarea>
+<textarea type="text" rows="3" name="queryField" placeholder="Query" class="form-control" ng-model="queryField" required></textarea>
 
 <button type="submit" class="btn btn-default">Add Query</button>
 
