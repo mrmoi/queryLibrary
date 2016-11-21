@@ -15,6 +15,7 @@
     box-shadow: 2px 2px;
     -webkit-transition-duration: 0.5s;
     transition-duration: 0.5s;
+    transition: all .2s ease-in-out;
     color: darkslateblue;
     font-family: 'Trirong', serif;
     font-size: 1.0em;
@@ -25,6 +26,7 @@
     border: 1px solid #5966b2;
     color: aliceblue;
     transition: 0.5s;
+    transform: scale(1.1);
 }
 
 /* COLORS TO BE USED
@@ -60,7 +62,7 @@
     vertical-align: top;*/
     color: #fff3cb;
     font-family: 'Slabo 27px', serif;
-    font-size: 1.3em;
+    font-size: 1.4em;
     font-weight: bolder;
     text-shadow: 2px 1px #5966b2;
 
@@ -70,7 +72,7 @@
 .navbar .navbar-nav li a:hover {
     color: #5966b2;
     font-family: 'Slabo 27px', serif;
-    font-size: 1.3em;
+    font-size: 1.4em;
     font-weight: bolder;
     text-shadow: 2px 1px #fff3cb;
 }
@@ -95,12 +97,14 @@ main {
     padding: 5%;
 }
 
+/* EXTRAS */
 h1, h2, h3, h4, h5 {
     font-family: 'Slabo 27px', serif;
 }
 
 p {
     font-family: 'Trirong', serif;
+    font-weight: 400;
 }
 
 .divider {
@@ -111,5 +115,20 @@ p {
     width: 75%;
 }
 
+label {
+    font-family: 'Trirong', serif;
+}
 
+button {
+    margin-top: 5%;
+}
 
+input {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+textarea {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}

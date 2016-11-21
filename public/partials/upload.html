@@ -3,34 +3,36 @@
 <p>To register your query enter the following information:</p>
 
 <form name="myform" ng-submit="addQuery()">
-<div>
-   <h5>Name</h5>
-   <input type="text" name="nameField" ng-model="nameField">
+
+<div class="form-group col-md-8">
+
+<label>Name</label>
+<input type="text" class="form-control" placeholder="Name" name="nameField" ng-model="nameField">
+
+<label>Category</label>
+<select name="repeatSelect" ng-model="categoryField" class="form-control">
+<option ng-repeat="a in queries" ng-if="$index < 3" value="{{a.category}}">{{ a.category }}</option>
+</select>
+
+<label>Description</label>
+<input type="text" name="descriptionField" placeholder="Description" class="form-control" ng-model="descriptionField">
+
+<label>Query</label>
+<textarea type="text" rows="3" name="queryField" placeholder="Query" class="form-control" ng-model="queryField"></textarea>
+
+<button type="submit" class="btn btn-default">Add Query</button>
+
+</div>
+</form>
+
 
 <!--<h5>Category</h5>
    <select>
    <option name="categoryField" ng-repeat="(key, a) in queries" ng-model="categoryField" value="{{ a.category }}">{{ a.category }}</option>
    </select>-->
 
-    <!--<h5>Category</h5>
-    <select ng-options="c as c.category for c in queries track by c.key" ng-model="categoryField">
-    </select>-->
-<br>
-    <br>
-
-    <select name="repeatSelect" ng-model="categoryField">
-        <option ng-repeat="a in queries" ng-if="$index < 3" value="{{a.category}}">{{ a.category }}</option>
-    </select>
+<!--<h5>Category</h5>
+<select ng-options="c as c.category for c in queries track by c.key" ng-model="categoryField">
+</select>-->
 
 <!--<select ng-model="categoryField" ng-options="c.category for (id, c) in queries"><option value="">Select A Category</option></select>-->
-
-   <h5>Description</h5>
-   <input type="text" name="descriptionField" ng-model="descriptionField">
-
-   <h5>Query</h5>
-   <textarea type="text" rows="3" name="queryField" ng-model="queryField"></textarea>
-
-<hr>
-</div>
-    <button type="submit" class="btn">Add Query</button>
-</form>
