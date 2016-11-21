@@ -4,12 +4,14 @@
     </div>
 </form>
 
-<hr>
+
 
 <!-- can be converted into a component -->
 <div ng-repeat="(key, n) in queries | filter : 'Movies' | filter:searchFilter">
     <button class="queryButton" ng-href="#" ng-click="viewQuery = !viewQuery">{{ n.name }}</button>
+    <div class="queryButtonContent">
     <p ng-show="viewQuery">{{ n.description }}</p>
     <p ng-show="viewQuery">{{ n.category }}</p>
     <pre ng-show="viewQuery">{{ n.query | uppercase}}</pre>
+    </div>
 </div>

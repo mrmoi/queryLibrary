@@ -29,6 +29,11 @@
     transform: scale(1.1);
 }
 
+.queryButtonContent {
+    background-color: #b2a16b;
+    padding: 0% 2% 0% 2%;
+}
+
 /* COLORS TO BE USED
 #b2a16b light brown
 #fff3cb off white
