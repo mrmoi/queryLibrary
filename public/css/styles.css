@@ -93,9 +93,17 @@
 
 
 /* BACKGROUND */
-.mainContainer {
+/*body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}*/
+
+body {
     background-color: #fff3cb;
+    height: 100vh;
 }
+
 /* INNER CONTAINER */
 main {
     background-color: #ffedb2;
@@ -104,6 +112,9 @@ main {
     padding-top: 5%;
     padding-left: 5%;
     padding-right: 5%;
+    padding-bottom: 25%;
+    height: 100vh;
+
 }
 
 /* EXTRAS */
