@@ -7,11 +7,24 @@ myApp.controller('dbController',['$scope','$rootScope','$firebaseArray','FIREBAS
 
 /* Data to store: QueryName, QueryCategory, Query description, Query, Date/Time uploaded */
 
-// Get a reference to the database service
+// Get a reference to the database service - store queries
 var queriesRef = new Firebase(FIREBASE_URL + '/queries');
 var queriesInfo = $firebaseArray(queriesRef);
 $scope.queries = queriesInfo;
 
+// Store categories
+var categoriesRef = new Firebase(FIREBASE_URL + '/categories');
+var categoriesInfo = $firebaseArray(categoriesRef);
+$scope.categories = categoriesInfo;
+
+$scope.addCategory = function () {
+   categoriesInfo.$add({
+      category: $scope.catField,
+      date:     Firebase.ServerValue.TIMESTAMP
+   }).then(function () {
+      $scope.catField = '';
+   });
+};
 
 $scope.addQuery = function() {
    queriesInfo.$add({

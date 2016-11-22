@@ -7,7 +7,7 @@
 <p>Number of Queries: {{ queries.length }}</p>
 
 
-<nav class="navbar navbar-default customNav">
+<nav class="navbar navbar-default" style="background-color: #b2a16b">
     <div class="container-fluid">
 
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -20,11 +20,16 @@
             </button>
         </div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-            <ul class="nav navbar-nav">
-                <li><a ui-sref="view.cat1" ng-repeat="(key, n) in queries" ng-show="$index==0">{{ n.category }}</a></li>
-                <li><a ui-sref="view.cat2" ng-repeat="(key, n) in queries" ng-show="$index==1">{{ n.category }}</a></li>
-                <li><a ui-sref="view.cat3" ng-repeat="(key, n) in queries" ng-show="$index==2">{{ n.category }}</a></li>
+       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+            <ul class="nav navbar-nav" style="border: 1px solid #fff3cb">
+                <li style="background-color: #ffedb2"><a ui-sref="view.cat1" ng-repeat="(key, n) in queries" ng-show="$index==0" style="color: #b2a16b;">{{ n.category }}</a></li>
+                <li style="background-color: #ffedb2"><a ui-sref="view.cat2" ng-repeat="(key, n) in queries" ng-show="$index==1" style="color: #b2a16b;">{{ n.category }}</a></li>
+                <li style="background-color: #ffedb2"><a ui-sref="view.cat3" ng-repeat="(key, n) in queries" ng-show="$index==2" style="color: #b2a16b;">{{ n.category }}</a></li>
+            </ul>
+        </div><!--&lt;!&ndash; /.navbar-collapse &ndash;&gt;-->
+        <!--<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+            <ul class="nav navbar-nav" ng-repeat="(key, n) in categories">
+                <li><a ui-sref="view.cat1">{{ n.category }}</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
