@@ -1,9 +1,20 @@
 /*
+COLORS TO BE USED
+
+#b2a16b light brown
+#fff3cb off white
+#ffedb2 beige
+#5966b2 blue
+#b2bdff light blue
+
+
 .active {
     background-color: coral;
     color: white;
 }
 */
+
+/* QUERY BUTTONS STYLES */
 .queryButton {
     padding: 2px 2px 2px 2px;
     margin: 6px 0px 6px 0px;
@@ -31,17 +42,22 @@
 
 .queryButtonContent {
     background-color: #b2a16b;
-    padding: 0% 2% 0% 2%;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: aliceblue;
+    font-family: 'Trirong', serif;
+    font-weight: 600;
 }
 
-/* COLORS TO BE USED
-#b2a16b light brown
-#fff3cb off white
-#ffedb2 beige
-#5966b2 blue
-#b2bdff light blue
-*/
-
+.queryButton pre {
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0;
+    background-color: #fff3cb;
+}
 
 /* MENU */
 
@@ -88,14 +104,7 @@
 }
 
 
-
-
 /* BACKGROUND */
-/*body {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}*/
 
 body {
     background-color: #fff3cb;
