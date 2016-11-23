@@ -3,7 +3,10 @@
 <h4>Register Query</h4>
 <!-- QUERY NAME -->
 <p>To register your query enter the following information:</p>
+<<<<<<< HEAD
 </div>
+=======
+>>>>>>> 2df43f2fedbc28ce3701de24470295531fc5eca8
 <!--
 <h4>Create a new category:</h4>
 <form class="newCategory" name="newCategory" ng-submit="addCategory()" novalidate>
@@ -23,10 +26,13 @@
 <input type="text" class="form-control" placeholder="Name" name="nameField" ng-model="nameField" required>
 
 <label>Category</label>
+<input type="text" class="form-control" placeholder="category" name="categoryField" ng-model="categoryField" required>
+<!--
+<label>Category</label>
 <select name="repeatSelect" ng-model="categoryField" class="form-control" required>
 <option ng-repeat="a in queries" ng-if="$index < 3" value="{{a.category}}">{{ a.category }}</option>
 </select>
-
+-->
 <label>Description</label>
 <input type="text" name="descriptionField" placeholder="Description" class="form-control" ng-model="descriptionField" required>
 
