@@ -23,15 +23,15 @@
 <h4>Query Information:</h4>
 <label>Name</label>
 <input type="text" class="form-control" placeholder="Name" name="nameField" ng-model="nameField" required>
-
+<!--
 <label>Category</label>
 <input type="text" class="form-control" placeholder="category" name="categoryField" ng-model="categoryField" required>
-<!--
+-->
 <label>Category</label>
 <select name="repeatSelect" ng-model="categoryField" class="form-control" required>
 <option ng-repeat="a in queries" ng-if="$index < 3" value="{{a.category}}">{{ a.category }}</option>
 </select>
--->
+
 <label>Description</label>
 <input type="text" name="descriptionField" placeholder="Description" class="form-control" ng-model="descriptionField" required>
 
