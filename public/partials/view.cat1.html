@@ -6,7 +6,7 @@
 
 
 <!-- could be converted into a component -->
-<div ng-repeat="(key, n) in queries | filter : 'Movies' | filter:searchFilter">
+<div ng-repeat="(key, n) in queries | filter : 'Music' | filter:searchFilter">
     <button class="queryButton" ng-href="#" ng-click="viewQuery = !viewQuery">{{ n.name }}</button>
     <div class="queryButtonContent">
     <p ng-show="viewQuery">Description: {{ n.description }}</p>
