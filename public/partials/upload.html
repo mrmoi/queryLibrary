@@ -29,7 +29,7 @@
 -->
 <label>Category</label>
 <select name="repeatSelect" ng-model="categoryField" class="form-control" required>
-<option ng-repeat="a in queries" ng-if="$index < 3" value="{{a.category}}">{{ a.category }}</option>
+<option ng-repeat="a in categories" ng-if="$index < 3" value="{{a.category}}">{{ a.category }}</option>
 </select>
 
 <label>Description</label>

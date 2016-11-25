@@ -23,9 +23,9 @@
 
        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
             <ul class="nav navbar-nav">
-                <li><a ui-sref="view.cat1" ng-repeat="(key, n) in queries" ng-show="$index==0">{{ n.category }}</a></li>
-                <li><a ui-sref="view.cat2" ng-repeat="(key, n) in queries" ng-show="$index==1">{{ n.category }}</a></li>
-                <li><a ui-sref="view.cat3" ng-repeat="(key, n) in queries" ng-show="$index==2">{{ n.category }}</a></li>
+                <li><a ui-sref="view.cat1" ng-repeat="(key, n) in categories" ng-show="$index==2">{{ n.category }}</a></li>
+                <li><a ui-sref="view.cat2" ng-repeat="(key, n) in categories" ng-show="$index==1">{{ n.category }}</a></li>
+                <li><a ui-sref="view.cat3" ng-repeat="(key, n) in categories" ng-show="$index==0">{{ n.category }}</a></li>
             </ul>
         </div>
 
