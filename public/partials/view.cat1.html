@@ -5,12 +5,22 @@
 </form>
 
 
-<!-- could be converted into a component -->
-<div ng-repeat="(key, n) in queries | filter : 'Music' | filter:searchFilter">
+<!--could be converted into a component-->
+<!--<div ng-repeat="(key, n) in queries | filter : 'Music' | filter:searchFilter">
     <button class="queryButton" ng-href="#" ng-click="viewQuery = !viewQuery">{{ n.name }}</button>
     <div class="queryButtonContent">
     <p ng-show="viewQuery">Description: {{ n.description }}</p><button type="button" class="btn-sm btn-primary pull-right">Copy</button>
     <p ng-show="viewQuery">Category: {{ n.category }}</p>
     <pre ng-show="viewQuery">{{ n.query | uppercase}}</pre>
+    </div>
+</div>
+
+<!-- can be converted into a component -->
+<div ng-repeat="(key, n) in queries | filter : 'Music' | filter:searchFilter">
+    <button class="queryButton" ng-href="#" ng-click="viewQuery = !viewQuery">{{ n.name }}</button>
+    <div class="queryButtonContent">
+        <p ng-show="viewQuery">Description: {{ n.description }} <button type="button" class="btn-sm btn-primary pull-right" ngclipboard data-clipboard-target="{{'#objeto-'+$index}}">Copy</button></p>
+        <p ng-show="viewQuery">Category: {{ n.category }}</p>
+        <pre ng-attr-id="{{ 'objeto-'+$index }}" ng-show="viewQuery">{{ n.query | uppercase}}</pre>
     </div>
 </div>
