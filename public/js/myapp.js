@@ -11,35 +11,35 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
         {
             name: 'view',
             url:  '/view',
-            templateUrl: 'public/partials/view.html',
+            templateUrl: 'partials/view.html',
             controller: 'dbController'
         },
 
         {
             name: 'upload',
             url: '/upload',
-            templateUrl: 'public/partials/upload.html',
+            templateUrl: 'partials/upload.html',
             controller: 'dbController'
         },
 
         {
             name: 'view.cat1',
             url: '/view.cat1',
-            templateUrl: 'public/partials/view.cat1.html',
+            templateUrl: 'partials/view.cat1.html',
             controller: 'dbController'
         },
 
         {
             name: 'view.cat2',
             url: '/view.cat2',
-            templateUrl: 'public/partials/view.cat2.html',
+            templateUrl: 'partials/view.cat2.html',
             controller: 'dbController'
         },
 
         {
             name: 'view.cat3',
             url: '/view.cat3',
-            templateUrl: 'public/partials/view.cat3.html',
+            templateUrl: 'partials/view.cat3.html',
             controller: 'dbController'
         }
 
